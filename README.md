@@ -22,7 +22,7 @@ In other words, while classifiers may be excellent at predicting whether a custo
 In this regard, recall is the primary metric that will be maximized, as doing so would minimize the chance of false negatives in the prediction of customer churn when paired with accuracy. 
 However, other metrics such as precision, F1 score, and PR curves were also considered. (More information is detailed in the notebook). 
 
-![A bar graph showing 84 percent of customers being non-attrited for a total of 8500 and 16 percent of customers being attrited for a total of 1627](https://github.com/pw45000/BankChurn/blob/main/images/customer.png?raw=true)
+![A bar graph showing 84 percent of customers being non-attrited for a total of 8500 and 16 percent of customers being attrited for a total of 1627](https://github.com/pw45000/BankChurn/blob/master/images/customer.png?raw=true)
 
 ## The Solution
 There are many solutions to the issue, but the solution that was employed was the use of Data Sampling, specifically- [Random Over-Sampling](https://machinelearningmastery.com/random-oversampling-and-undersampling-for-imbalanced-classification/#:~:text=FREE%20Mini%2DCourse-,Random%20Oversampling%20Imbalanced%20Datasets,-Random%20oversampling%20involves), [Random Under-Sampling](https://machinelearningmastery.com/random-oversampling-and-undersampling-for-imbalanced-classification/#:~:text=look%20at%20undersampling.-,Random%20Undersampling%20Imbalanced%20Datasets,-Random%20undersampling%20involves), and [SMOTE](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/). 
@@ -60,15 +60,15 @@ In addition, two soft-voting ensembles were made taking three models which were 
 ### What is the best combination? 
 - Random Forest (Under Sampling) had a 95% recall and 94% accuracy, so by the metrics defined earlier, it’s the “best” classifier.
 - While it has impressive primary metrics, it suffers from poor precision, but false positives are the lesser evil compared to a false negative.
-![The metrics of the Random Forest Classifier. It has a 95% recall and 94% accuracy, as well as 77% precision and an 85% f1 score.](https://github.com/pw45000/BankChurn/blob/main/images/metrics.png?raw=true)
-![The confusion matrix of the Random Forest Classifier. It has 1604 true positives, 310 true negatives, 95 false positives, and 17 false negatives.](https://github.com/pw45000/BankChurn/blob/main/images/confusion_matrix.png?raw=true)
+![The metrics of the Random Forest Classifier. It has a 95% recall and 94% accuracy, as well as 77% precision and an 85% f1 score.](https://github.com/pw45000/BankChurn/blob/master/images/metrics.png?raw=true)
+![The confusion matrix of the Random Forest Classifier. It has 1604 true positives, 310 true negatives, 95 false positives, and 17 false negatives.](https://github.com/pw45000/BankChurn/blob/master/images/confusion_matrix.png?raw=true)
 
 ## What Contributed the Most to Churning? 
 Utilizing the best classifier (i.e. Random Forest Under Sampling), feature importance can be obtained via a sklearn method on said classifier. 
 
 Of the features explored, Total Transaction Count and Total Revolving Balance are the most telling in terms of risk factors. 
 
-![The graph of each feature's importance. Here, outside of the previously mentioned factors, the revolving balance and change from quarter 4 to 1 are the most important.](https://github.com/pw45000/BankChurn/blob/main/images/feature_importance.png?raw=true)
+![The graph of each feature's importance. Here, outside of the previously mentioned factors, the revolving balance and change from quarter 4 to 1 are the most important.](https://github.com/pw45000/BankChurn/blob/master/images/feature_importance.png?raw=true)
 
 
 ## Contributors 
